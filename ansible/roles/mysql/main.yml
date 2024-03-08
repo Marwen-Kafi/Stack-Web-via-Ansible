@@ -1,0 +1,16 @@
+---
+- name: Installation et démarrage de MySQL
+  hosts: Servers
+  become: true
+  tasks:
+    - name: Installation de MySQL
+      package:
+        name: mysql-server
+        state: present
+
+    - name: Démarrage de MySQL
+      service:
+        name: mysql
+        state: started
+        enabled: true
+

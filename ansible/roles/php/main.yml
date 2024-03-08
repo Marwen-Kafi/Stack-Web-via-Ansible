@@ -1,0 +1,10 @@
+---
+- name: Installation de PHP
+  hosts: Servers
+  become: true
+  tasks:
+    - name: Installation de PHP
+      package:
+        name: php
+        state: present
+

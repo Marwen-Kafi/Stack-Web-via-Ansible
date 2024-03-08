@@ -1,0 +1,12 @@
+---
+- name: Installation de Nginx
+  package:
+    name: nginx
+    state: present
+
+- name: Démarrage de Nginx
+  service:
+    name: nginx
+    state: started
+    enabled: true
+

@@ -1,0 +1,12 @@
+---
+- name: Déploiement de la stack web
+  hosts: Servers
+  become: true
+  tasks:
+    - include_role:
+        name: nginx
+    - include_role:
+        name: mysql
+    - include_role:
+        name: php
+
